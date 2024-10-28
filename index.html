@@ -31,7 +31,7 @@
                 <div class="hidden md:flex md:space-x-4 items-center text-accent">
                     <a href="#home" class="hover:text-list px-3 py-2 rounded-md text-sm font-medium">Home</a>
                     <a href="#about" class="hover:text-list px-3 py-2 rounded-md text-sm font-medium">About</a>
-                    <a href="#services" class="hover:text-list px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                    <a href="#services" class="hover:text-list px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
                     <a href="#contact" class="hover:text-list px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                 </div>
                 <div class="-mr-2 flex md:hidden">
@@ -50,7 +50,7 @@
         <div class="px-2 py-3 space-y-1">
             <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium">Home</a>
             <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium">About</a>
-            <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium">Services</a>
+            <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
             <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium">Contact</a>
         </div>
     </div>
@@ -71,14 +71,14 @@
                 <p class="mt-4 md:w-8/12 text-justify">Wujudkan visi digital Anda dan ciptakan situs web yang memikat dan fungsional dengan kami.</p>
                 <button class="mt-4 px-4 py-2 bg-secondary hover:bg-primary text-white rounded-full transition duration-300 ease-in-out">Contact Us</button>
             </div>
-            <div class="md:mt-0 mt-10 md:w-1/2 p-2 bg-gradient-to-r from-primary to-secondary rounded-tl-full rounded-br-full relative overflow-hidden">
-                <div class="absolute inset-0 bg-primary bg-opacity-30 transition-opacity duration-300 opacity-0 hover:opacity-100"></div>
+            <div class="md:mt-0 mt-10 md:w-1/2 p-2 bg-gradient-to-r from-secondary to-white rounded-tl-full rounded-br-full relative overflow-hidden">
+                <div class="absolute inset-0 bg-secondary bg-opacity-30 transition-opacity duration-300 opacity-0 hover:opacity-100"></div>
                 <img src="image/component1.jpg" alt="component1" class="rounded-br-full rounded-tl-full">
             </div>            
         </div>
 
         <div class="w-full flex justify-center">
-            <hr class="border border-primary my-8 mb-10 w-8/12"/>
+            <hr class="border border-primary my-24 w-8/12"/>
         </div>
 
         <!-- ABOUT -->
@@ -88,8 +88,9 @@
                     <h2 class="text-3xl font-bold text-white transition-colors duration-300 hover:text-list">
                         Apa yang Kami Lakukan?
                     </h2>                    
-                    <div class="w-full flex justify-start">
-                        <hr class="border border-white my-4 w-8/12"/>
+                    <div class="w-full flex justify-start my-4 items-center">
+                        <span class="bg-white w-2 h-2 rounded-full rotate-45 transition-transform duration-200"></span>
+                        <hr class="border border-white  w-8/12"/>
                     </div>
                     <p class="mt-4 text-white font-extralight md:pr-10 text-justify">Kami merupakan tim pengembang web yang berpengalaman, siap memberikan solusi digital yang inovatif dan efektif untuk memenuhi kebutuhan Anda.</p>
                 </div>
@@ -129,20 +130,34 @@
 
         <!-- PORTFOLIO -->
         <div id="services" class="py-20 md:px-10 items-center md:flex justify-between">
-            <div class="md:w-1/2">
-                <h2 class="text-3xl font-bold bg-gradient-to-r from-secondary to-accent text-white w-full rounded-full pl-10 py-4">Inovasi yang Telah Kami Ciptakan</h2>
-                <p class="mt-4 text-gray-600">Kami menawarkan berbagai layanan pengembangan web.</p>
+            <div class="md:w-1/2 flex flex-col items-center">
+                <h2 class="md:text-3xl text-xl font-bold bg-gradient-to-r from-secondary to-accent text-white md:w-full text-center md:text-start rounded-full md:pl-10 mx-4 px-2 py-4">Inovasi yang Telah Kami Ciptakan</h2>
+                <p class="mt-4 text-secondary text-justify px-10 py-5">
+                    Kami dengan bangga telah mengembangkan berbagai produk unggulan yang dirancang untuk memenuhi kebutuhan dan harapan pelanggan. Berikut adalah beberapa hasil karya kami yang mencerminkan komitmen kami dalam memberikan solusi terbaik di bidang pengembangan web.
+                </p>                 
+                <div class="flex items-center w-full mb-4 mx-10 px-10">
+                    <span class="bg-secondary w-3 h-3 rotate-45 transition-transform duration-200"></span>
+                    <h2 class="text-xl font-semibold text-secondary w-full rounded-full pl-5 py-4 cursor-pointer" onclick="rotateIcon(this)">
+                        Menara Dunia Tour & Travel
+                    </h2>
+                </div>
+                <div class="flex items-center w-full mb-4 mx-10 px-10">
+                    <span class="bg-secondary w-3 h-3 rotate-45 transition-transform duration-200"></span>
+                    <h2 class="text-xl font-semibold text-secondary w-full rounded-full pl-5 py-4 cursor-pointer" onclick="rotateIcon(this)">
+                        Inovasi yang Telah Kami Ciptakan
+                    </h2>
+                </div>
             </div>
-            <div class="md:w-1/2">
-                <h2 class="text-3xl font-bold">Inovasi yang Telah Kami Ciptakan</h2>
-                <p class="mt-4 text-gray-600">Kami menawarkan berbagai layanan pengembangan web.</p>
+            <div class="md:w-1/2 bg-gray-50 flex flex-col justify-center">
+                <h2 class="text-3xl font-bold px-10">Inovasi yang Telah Kami Ciptakan</h2>
+                <p class="mt-4 text-gray-600 px-10">Kami menawarkan berbagai layanan pengembangan web.</p>
             </div>
         </div>
 
         <div id="contact" class="py-20 text-center">
             <h2 class="text-3xl font-bold">Hubungi Kami</h2>
             <p class="mt-4 text-gray-600">Jangan ragu untuk menghubungi kami untuk informasi lebih lanjut.</p>
-    </div>
+        </div>
     </div>
 
     <script>
@@ -152,6 +167,11 @@
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        function rotateIcon(element) {
+            const icon = element.previousElementSibling;
+            icon.classList.toggle('rotate-0');
+        }
     </script>
 </body>
 </html>
