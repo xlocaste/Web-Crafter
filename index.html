@@ -161,10 +161,82 @@
             </div>
         </div>        
 
-        <div id="contact" class="py-20 text-center">
-            <h2 class="text-3xl font-bold">Hubungi Kami</h2>
-            <p class="mt-4 text-gray-600">Jangan ragu untuk menghubungi kami untuk informasi lebih lanjut.</p>
+        <!-- CONTACT -->
+        <div id="contact" class="md:flex gap-3 px-10">
+            <div class="md:w-4/6 shadow-md rounded-lg bg-white text-center py-10">
+                <h2 class="text-3xl font-bold text-secondary">Hubungi Kami</h2>
+                <p class="mt-4 text-gray-600">Jangan ragu untuk menghubungi kami untuk informasi lebih lanjut.</p>
+    
+                <div class=" max-w-md mx-auto">
+                    <form class="bg-white p-6 rounded-lg">
+                        <div class="mb-4">
+                            <label for="name" class="block text-left mb-2 text-sm font-medium text-gray-700">Nama</label>
+                            <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary" placeholder="Masukkan nama Anda" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-left mb-2 text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary" placeholder="Masukkan email Anda" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-left mb-2 text-sm font-medium text-gray-700">Pesan</label>
+                            <textarea id="message" rows="4" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary" placeholder="Tuliskan pesan Anda" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-secondary text-white px-4 py-2 rounded-md font-bold hover:bg-opacity-80 transition duration-300">Kirim Pesan</button>
+                    </form>
+                </div>
+    
+                <div class="mt-10 flex flex-col items-center">
+                    <h3 class="text-xl font-semibold">Atau hubungi kami melalui:</h3>
+                    <div class="mt-4 flex items-center">
+                        <i class="fas fa-envelope text-secondary mr-2"></i>
+                        <p class="text-gray-600">Email: <a href="mailto:info@example.com" class="text-secondary">info@webcrafters.com</a></p>
+                    </div>
+                    <div class="mt-2 flex items-center">
+                        <i class="fas fa-phone-alt text-secondary mr-2"></i>
+                        <p class="text-gray-600">Telepon: <a href="tel:+62123456789" class="text-secondary">+62 123 456 789</a></p>
+                    </div>
+                </div>            
+            </div>
+            <div class="relative bg-white md:w-2/6 shadow-lg hidden md:block">
+                <img src="image/component1.jpg" alt="" class="object-cover h-full rounded-lg">
+                <div class="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent rounded-lg"></div>
+            </div>
+            
         </div>
+
+        <!-- FOOTER -->
+        <footer class="bg-gray-800 mt-10 text-white py-10 pb-3">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row md:justify-between">
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-lg">Hubungi Kami</h4>
+                        <p class="mt-2">Email: <a href="mailto:info@example.com" class="text-secondary">info@webcrafters.com</a></p>
+                        <p>Telepon: <a href="tel:+62123456789" class="text-secondary">+62 123 456 789</a></p>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-lg">Ikuti Kami</h4>
+                        <div class="flex space-x-4 mt-2">
+                            <a href="#" class="text-secondary hover:text-gray-400">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="text-secondary hover:text-gray-400">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-secondary hover:text-gray-400">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-secondary hover:text-gray-400">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 border-t border-gray-600 pt-4 text-center">
+                    <p>&copy; 2024 Web Crafters. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>        
+
     </div>
 
     <script>
@@ -173,6 +245,8 @@
 
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('translate-y-0');
+            mobileMenu.classList.toggle('opacity-100');
         });
 
         function showImageAndRotateIcon(imageSrc, description, iconId) {
